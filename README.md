@@ -13,7 +13,7 @@ docker build -t [image-name] .
 ```
 4. 
 ``` bash
-docker run -d -p 3000:8080 -e WEBUI_AUTH=False -e ENABLE_FOLLOW_UP_GENERATION=False -v open-webui:/app/backend/data --name open-webui [image-name]
+docker run -d -p 3000:8080 -e WEBUI_AUTH=False -e ENABLE_FOLLOW_UP_GENERATION=False -e ENABLE_DIRECT_CONNECTIONS=True -v open-webui:/app/backend/data --name open-webui [image-name]
 ```
 5. Choď na http://localhost:3000/ a nastav url nášho BE takto a ulož
 ![alt text](image.png)
