@@ -1,3 +1,25 @@
+# TP 2025
+Na set up použi buď návod dole, alebo oficialnu dokumentaciu https://docs.openwebui.com/getting-started/quick-start/starting-with-openai-compatible#step-2-connect-your-server-to-open-webui
+## Návod na setup webui v dockeri
+
+1. clone this repo
+2. 
+``` bash
+cd open-webui
+```
+3. 
+``` bash
+docker build -t [image-name] .
+```
+4. 
+``` bash
+docker run -d -p 3000:8080 -e WEBUI_AUTH=False -e ENABLE_FOLLOW_UP_GENERATION=False -v open-webui:/app/backend/data --name open-webui [image-name]
+```
+5. Choď na http://localhost:3000/ a nastav url nášho BE takto a ulož
+![alt text](image.png)
+
+6. Vyber model alebo refreshi stranku
+
 # Open WebUI 👋
 
 ![GitHub stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social)
